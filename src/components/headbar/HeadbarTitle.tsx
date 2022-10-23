@@ -1,7 +1,7 @@
 const HeadbarTitle = () => {
   return (
-    <div className="HeadbarTitle">
-      <div className="HeadbarTitle__txt">HeadbarTitle</div>
+    <div className="HeadbarTitleWrap">
+      <h1 className="HeadbarTitle">Dairy Timeline App</h1>
     </div>
   );
 };
