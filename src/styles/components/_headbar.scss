@@ -1,9 +1,13 @@
+@use "../config";
 .headbar {
 }
 .HeadbarTitleWrap {
-  background: #594545;
+  background: config.$primary-color;
   color: #fff;
-  padding: 10px;
+  padding: 10px config.$sp-horizon-spacing;
+  @include config.media(md) {
+    padding: 20px config.$horizon-spacing;
+  }
 }
 .HeadbarTitle {
   font-size: 24px;
@@ -12,10 +16,34 @@
 }
 .headbarInput {
   background: #fff8ea;
-  padding: 30px 0;
+  padding: config.$sp-vertical-spacing 0;
+  @include config.media(md) {
+    padding: config.$vertical-spacing 0;
+  }
   &__inner {
-    max-width: 1080px;
+    max-width: config.$md-max-width;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 config.$sp-horizon-spacing;
+    @include config.media(md) {
+      padding: 0 config.$horizon-spacing;
+    }
+  }
+  input {
+    padding: 15px;
+    background: rgba(#fff, 0.8);
+    color: config.$primary-color;
+    width: 100%;
+    border: 1px solid config.$secondary-light-color;
+    border-radius: 5px;
+    @include config.font-set(s);
+    transition: 0.3s;
+    &::placeholder {
+      color: rgba(config.$secondary-light-color, 0.3);
+    }
+    &:focus {
+      border: 1px solid config.$primary-color;
+      outline: none;
+      background: rgba(config.$secondary-light-color, 0.1);
+    }
   }
 }

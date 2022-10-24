@@ -1,6 +1,17 @@
 html {
   font-size: 62.5%;
 }
+html,
+body {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: manipulation;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3",
     "メイリオ", Meiryo, "ＭＳ Ｐゴシック", Arial, Verdana, sans-serif;
@@ -9,4 +20,28 @@ body {
   font-size: 1.4rem;
   color: #594545;
   letter-spacing: 0.006em;
+}
+main {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+pre {
+  white-space: pre-wrap;
+}
+nav ul {
+  list-style: none;
+}
+strong {
+  font-weight: 700;
+}
+img {
+  vertical-align: bottom;
+  display: block;
 }
