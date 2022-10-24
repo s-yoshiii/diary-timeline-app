@@ -1,4 +1,3 @@
-import "./Headbar.scss";
 import HeadbarInput from "./HeadbarInput";
 import HeadbarTitle from "./HeadbarTitle";
 const Headbar = () => {

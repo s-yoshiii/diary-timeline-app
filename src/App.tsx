@@ -1,4 +1,4 @@
-import "./App.scss";
+import "./styles/style.scss";
 import Headbar from "./components/headbar/Headbar";
 
 function App() {
