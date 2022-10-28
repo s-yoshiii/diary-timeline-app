@@ -2,7 +2,8 @@ import { useDropzone } from "react-dropzone";
 import "css.gg/icons/scss/software-upload.scss";
 const HeadbarInput = () => {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
-  const files = acceptedFiles.map((file) => <li>{file.path}</li>);
+  const isAcceptedFiles = acceptedFiles.length > 0;
+  const files = acceptedFiles.map((file) => <li>{file.name}</li>);
   return (
     <div className="headbarInput">
       <div className="headbarInput__inner">
@@ -15,7 +16,10 @@ const HeadbarInput = () => {
               here, or click to select files
             </p>
           </div>
-          <ul>{files}</ul>
+          {isAcceptedFiles && <ul className="inputfile__list">{files}</ul>}
+          <button className="inputfile__btn" type="submit">
+            SUBMIT
+          </button>
         </form>
       </div>
     </div>

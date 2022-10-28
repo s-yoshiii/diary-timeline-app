@@ -1,4 +1,5 @@
 @use "../config";
+@use "sass:math";
 .inputfile {
   margin-top: config.$horizon-spacing;
   background: #fff;
@@ -13,5 +14,19 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 0.5em;
+  }
+  &__list {
+    margin-top: math.div(config.$horizon-spacing, 2);
+  }
+  &__btn {
+    margin-top: config.$horizon-spacing;
+    background: config.$secondary-light-color;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 0.06em;
+    @include config.font-size(16);
   }
 }
