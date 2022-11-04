@@ -3,10 +3,12 @@ import TimelineItem from "./TimelineItem";
 
 const Timeline: FC = () => {
   return (
-    <div>
-      <TimelineItem />
-      <TimelineItem />
-      <TimelineItem />
+    <div className="timeline">
+      <div className="timeline__inner">
+        <TimelineItem />
+        <TimelineItem />
+        <TimelineItem />
+      </div>
     </div>
   );
 };

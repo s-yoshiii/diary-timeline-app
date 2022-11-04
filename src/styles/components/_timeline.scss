@@ -1,0 +1,44 @@
+@use "../config";
+@use "sass:math";
+.timeline {
+  padding: config.$sp-vertical-spacing 0;
+  @include config.media(md) {
+    padding: config.$vertical-spacing 0;
+  }
+  &__inner {
+    max-width: config.$md-max-width;
+    margin: 0 auto;
+    padding: 0 config.$sp-horizon-spacing;
+    @include config.media(md) {
+      padding: 0 config.$horizon-spacing;
+    }
+  }
+  &__item {
+    padding-left: 50px;
+    @include config.media(md) {
+      padding-top: config.$vertical-spacing;
+      padding-bottom: config.$vertical-spacing;
+      padding-left: 100px;
+    }
+  }
+  &__itemInner {
+    border: 1px solid config.$secondary-color;
+    background: #fff;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: max-content;
+    grid-auto-flow: dense;
+  }
+  &__photo {
+    img {
+      height: 200px;
+      width: 100px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &__txtArea {
+    padding: 20px;
+  }
+}

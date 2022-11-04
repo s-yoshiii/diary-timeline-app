@@ -1,3 +1,4 @@
+@use "../config";
 html {
   font-size: 62.5%;
 }
@@ -20,6 +21,7 @@ body {
   font-size: 1.4rem;
   color: #594545;
   letter-spacing: 0.006em;
+  background: rgba(config.$bg-color, 0.5);
 }
 main {
   display: block;
@@ -44,4 +46,5 @@ strong {
 img {
   vertical-align: bottom;
   display: block;
+  max-width: 100%;
 }
