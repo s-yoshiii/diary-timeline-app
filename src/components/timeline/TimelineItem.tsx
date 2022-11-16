@@ -6,9 +6,10 @@ const TimelineItem: FC = () => {
       <div className="timeline__itemInner">
         <div className="timeline__photo">
           <img src="https://source.unsplash.com/random" alt="" />
-          <img src="https://source.unsplash.com/random" alt="" />
         </div>
-        <div className="timeline__txtArea">aaaaaaaaa</div>
+        <div className="timeline__txtArea">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </div>
       </div>
     </div>
   );

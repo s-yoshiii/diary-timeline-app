@@ -14,7 +14,7 @@
     }
   }
   &__item {
-    padding-left: 50px;
+    margin-bottom: config.$sp-vertical-spacing;
     @include config.media(md) {
       padding-top: config.$vertical-spacing;
       padding-bottom: config.$vertical-spacing;
@@ -26,19 +26,27 @@
     background: #fff;
     border-radius: 5px;
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: max-content;
-    grid-auto-flow: dense;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    @include config.media(md) {
+      grid-template-columns: 2fr 3fr;
+      grid-template-rows: minmax(210px, max-content);
+      grid-auto-flow: dense;
+    }
   }
   &__photo {
+    overflow: hidden;
+    min-height: 210px;
     img {
-      height: 200px;
-      width: 100px;
+      height: 100%;
+      max-height: 210px;
+      width: 100%;
       object-fit: cover;
       object-position: center;
     }
   }
   &__txtArea {
     padding: 20px;
+    line-height: 2;
   }
 }
