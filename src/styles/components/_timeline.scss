@@ -13,8 +13,14 @@
       padding: 0 config.$horizon-spacing;
     }
   }
+  &__date {
+    margin-bottom: 10px;
+    display: inline-block;
+    color: config.$secondary-light-color;
+  }
   &__item {
-    margin-bottom: config.$sp-vertical-spacing;
+    position: relative;
+    padding-bottom: config.$sp-vertical-spacing;
     @include config.media(md) {
       padding-top: config.$vertical-spacing;
       padding-bottom: config.$vertical-spacing;
@@ -22,16 +28,46 @@
     }
   }
   &__itemInner {
+    position: relative;
     border: 1px solid config.$secondary-color;
     background: #fff;
     border-radius: 5px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    margin-left: 40px;
     @include config.media(md) {
       grid-template-columns: 2fr 3fr;
       grid-template-rows: minmax(210px, max-content);
       grid-auto-flow: dense;
+      margin-left: 0px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -25px;
+      height: calc(100% + config.$sp-vertical-spacing);
+      width: 1px;
+      background: config.$secondary-color;
+      @include config.media(md) {
+        content: none;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: config.$secondary-color;
+      border-radius: 50%;
+      position: absolute;
+      top: -5px;
+      left: -30px;
+      @include config.media(md) {
+        content: none;
+      }
     }
   }
   &__photo {
